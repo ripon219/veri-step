@@ -1,0 +1,13 @@
+#summary Links to sites and documents that will be useful for people viewing/working on this project.
+
+= Useful Links =
+This is a collection of links, both internal and external, to help people viewing/working on this project find what they're looking for.  It can include datasheets, instructional resources, specifications, and anything else pertinent to the project.
+
+== Datasheets ==
+[http://ww1.microchip.com/downloads/en/DeviceDoc/39931d.pdf PIC18F24J50]
+
+
+== Instructional Resources ==
+[http://ww1.microchip.com/downloads/en/AppNotes/00907a.pdf A very nice overview of stepping motor types and control published by Microchip]
+
+
