@@ -5,7 +5,7 @@
 |  Created on:  September 27, 2011                                            |
 |                                                                             |
 |  Description:                                                               |
-|                                                                             |
+|  This contains all global variables and settings.                           |
 +----------------------------------------------------------------------------*/
 
 
@@ -21,7 +21,7 @@
 
 
 // global settings variables
-char curMode;  //the current mode the VersaStep is in (use MODE enum)
+char curMode = 0;  //the current mode the VersaStep is in (use MODE enum)
 const char BIPOLAR = 0;		//for driving a bipolar stepper motor
 const char UNIPOLAR = 1;	//for driving a unipolar stepper motor
 const char DUAL_H_I = 2;	//2 independent H-bridges in current mode

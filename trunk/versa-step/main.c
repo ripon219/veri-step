@@ -5,7 +5,8 @@
 |  Created on:  September 27, 2011                                            |
 |                                                                             |
 |  Description:                                                               |
-|                                                                             |
+|  This code just calls the initialize function and then waits in an endless  |
+|  while loop.  The rest of the code is interrupt-driven.                     |
 +----------------------------------------------------------------------------*/
 
 
