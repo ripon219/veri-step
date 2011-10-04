@@ -1,18 +1,18 @@
 /*----------------------------------------------------------------------------+
 |  Project:  Versa Step                                                       |
-|  File:  mainScan.h                                                          |
+|  File:  pwm.c                                                               |
 |  Author:  Jonathan L Breen                                                  |
-|  Created on:  September 29, 2011                                            |
+|  Created on:  October 3, 2011                                               |
 |                                                                             |
 |  Description:                                                               |
-|                                                                             |
+|  This code gives the rest of the program convenient, high level access to   |
+|  PWM functionality, including setting modes and changing frequency and      |
+|  duty-cycle.                                                                |
 +----------------------------------------------------------------------------*/
 
-
-// includes
-#include "main.h"
+#include "pwm.h"
 
 
-// prototype functions
-void mainScan(void);
-void mainScanInit(void);
+void pwmInit(void){
+
+}

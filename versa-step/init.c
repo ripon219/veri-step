@@ -12,14 +12,18 @@
 #include "i2c.h"
 #include "flashMem.h"
 #include "mainScan.h"
+#include "pwm.h"
 
 void initialize(){
 
     // initialize clock
+	clockInit();
 
 	// initialize io
+	ioInit();
 
     // initialize USB
+	//usbInit();
 
     // initialize I2C
 	i2cInit();
@@ -27,18 +31,24 @@ void initialize(){
     // load settings
 	loadSettings();
 
+	// initialize PWM modules
+	pwmInit();
+
     // initialize main scan interrupt
 	mainScanInit();
 
 }
 
-void clockInit(void){
 
+void clockInit(void){
+	
+	OSCTUNE |= INTSRC & PLLEN;  //set low frequency clock source and enable PLL
+	OSCCON |= IRCF2 & IRCF1;  //set internal oscillator to 4 MHz
 }
 
 
 void ioInit(void){
-
+	
 }
 
 

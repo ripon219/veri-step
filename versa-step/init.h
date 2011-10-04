@@ -9,7 +9,11 @@
 +----------------------------------------------------------------------------*/
 
 
-//function prototypes
+// includes
+#include "main.h"
+
+
+// function prototypes
 void initialize(void);
 void clockInit(void);
 void ioInit(void);
