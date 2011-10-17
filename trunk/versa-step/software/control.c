@@ -10,7 +10,7 @@
 
 
 // includes
-#include control.h
+#include "control.h"
 
 
 /*----------------------------------------------------------------------------+
@@ -32,37 +32,36 @@ void stepInterrupt(void){
 // TODO: add code for other stepper types (right now just bipolar)
 
 	// check direction
-	if(DIR==1){  //forward
+	if(DIR==1)  //forward
 		curStep += uStep;  
-	} else {  //backward
+	else  //backward
 		curStep -= uStep;
 		// TODO: make sure subtraction from zero rolls over the way I think it should
-	}
 
 	// set new current commands
 	if(curStep<64){  //less than 90 degrees
-		iCommand1 = iLimit1/255*sine(curStep);
-		iCommand2 = iLimit1/255*sine(64-curStep);
-	} else if(curStep<128){  //less than 180 degrees
-		iCommand1 = iLimit1/255*sine(128-curStep);
-		iCommand2 = -iLimit1/255*sine(curStep-64);
-	} else if(curStep<192){  //less than 270 degrees
-		iCommand1 = -iLimit1/255*sine(curStep-128);
-		iCommand2 = -iLimit1/255*sine(192-curStep);
-	} else{  //less than 360 degrees
-		iCommand1 = -iLimit1/255*sine(256-curStep);
-		iCommand2 = iLimit1/255*sine(curStep-192);
+		iCommand1 = iLimit1/255*sine[curStep];
+		iCommand2 = iLimit1/255*sine[64-curStep];
+	}else if(curStep<128){  //less than 180 degrees
+		iCommand1 = iLimit1/255*sine[128-curStep];
+		iCommand2 = -iLimit1/255*sine[curStep-64];
+	}else if(curStep<192){  //less than 270 degrees
+		iCommand1 = -iLimit1/255*sine[curStep-128];
+		iCommand2 = -iLimit1/255*sine[192-curStep];
+	}else{  //less than 360 degrees
+		iCommand1 = -iLimit1/255*sine[256-curStep];
+		iCommand2 = iLimit1/255*sine[curStep-192];
 	}
 }
 
 
 void iControl(void){
-	
+
 }
 
 
 void initControlTimer(void){
-	
+
 }
 
 
