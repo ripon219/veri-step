@@ -14,6 +14,8 @@
 
 
 /*----------------------------------------------------------------------------+
+|  Function: stepInterrupt                                                   |
+|                                                                             |
 |  Description:                                                               |
 |  When a pulse is received on the STEP line, new current commands are set    |
 |  for each phase.  These current commands are based on a sinusoidal stepping |
@@ -32,11 +34,12 @@ void stepInterrupt(void){
 // TODO: add code for other stepper types (right now just bipolar)
 
 	// check direction
-	if(DIR==1)  //forward
+	if(DIR==1){  //forward
 		curStep += uStep;  
-	else  //backward
+	}else{  //backward
 		curStep -= uStep;
 		// TODO: make sure subtraction from zero rolls over the way I think it should
+	}
 
 	// set new current commands
 	if(curStep<64){  //less than 90 degrees
@@ -56,11 +59,13 @@ void stepInterrupt(void){
 
 
 void iControl(void){
+// TODO: set interrupt vector
 
 }
 
 
 void initControlTimer(void){
+// TODO: set to interrupt (iControl) at T = 1/CONTROL_FREQ seconds
 
 }
 
